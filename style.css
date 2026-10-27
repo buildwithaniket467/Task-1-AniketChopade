@@ -1,0 +1,383 @@
+
+/* ---------- Base Styles ---------- */
+:root {
+  --mocha: #A5956F;
+  --blue: #A0D4E0;
+  --moonlit: #F2F0EA;
+  --text: #30291F;
+  --muted: #5B554B;
+  --white: #FFFFFF;
+  --border: #DDD8CC;
+  --button: #55452F;
+  --button-hover: #403421;
+  --success: #245B3C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+  line-height: 1.25;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin-inline: auto;
+}
+
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #476D78;
+  outline-offset: 3px;
+}
+
+/* ---------- Header & Navigation ---------- */
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.logo span {
+  color: var(--mocha);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--button);
+}
+
+.menu-toggle {
+  display: none;
+  padding: 8px 12px;
+  background: var(--moonlit);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding-block: 60px;
+}
+
+.tagline {
+  color: var(--button);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.tagline) {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 22px;
+  background: var(--button);
+  color: var(--white);
+  border: 1px solid var(--button);
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--button-hover);
+}
+
+.hero-card {
+  background: var(--blue);
+  border-radius: 22px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.hero-icon {
+  font-size: 70px;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+/* ---------- Common Sections ---------- */
+.section {
+  padding-block: 75px;
+}
+
+.section h2 {
+  font-size: clamp(28px, 4vw, 34px);
+  margin-bottom: 30px;
+}
+
+/* ---------- Services ---------- */
+.services {
+  background: var(--moonlit);
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 30px;
+  border-radius: 14px;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgb(48 41 31 / 8%);
+}
+
+.service-icon {
+  font-size: 32px;
+  color: var(--button);
+}
+
+.service-card h3 {
+  margin: 14px 0 8px;
+}
+
+.service-card p,
+.about > p:last-child {
+  color: var(--muted);
+}
+
+/* ---------- About ---------- */
+.about {
+  text-align: center;
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  background: var(--moonlit);
+}
+
+.contact .container {
+  max-width: 650px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  font: inherit;
+  color: var(--text);
+  border: 1px solid #B8B0A1;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.contact textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact .btn {
+  align-self: flex-start;
+}
+
+#formMessage {
+  color: var(--success);
+  margin-top: 10px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 24px 0;
+  text-align: center;
+  color: var(--muted);
+  background: var(--white);
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .hero {
+    gap: 30px;
+  }
+
+  .service-grid {
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 24px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 24px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 15px rgb(48 41 31 / 6%);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-block: 50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 8vw, 42px);
+  }
+
+  .hero-card {
+    padding: 40px 24px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-block: 55px;
+  }
+
+  .section h2 {
+    margin-bottom: 24px;
+  }
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 380px) {
+  .logo {
+    font-size: 23px;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .service-card {
+    padding: 22px;
+  }
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

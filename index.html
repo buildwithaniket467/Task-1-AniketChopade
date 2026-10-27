@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Professional digital services for growing businesses."
+  >
+  <meta name="theme-color" content="#F2F0EA">
+
+  <title>Nova - Digital Services</title>
+
+  <!-- Google Fonts: Inter for headings, Roboto for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Main JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Header and Navigation -->
+  <header class="header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a class="logo" href="#home">
+        Nova<span>.</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero container" id="home">
+
+      <div class="hero-content">
+        <p class="tagline">YOUR IDEAS, OUR SOLUTIONS</p>
+
+        <h1>Build a better digital experience.</h1>
+
+        <p>
+          We help businesses grow with creative design,
+          modern websites, and reliable digital solutions.
+        </p>
+
+        <a class="btn" href="#services">Explore Services</a>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-icon" aria-hidden="true">✦</div>
+
+        <h2>Ideas into reality</h2>
+
+        <p>Simple solutions. Meaningful results.</p>
+      </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+      <div class="container">
+
+        <p class="tagline">WHAT WE DO</p>
+
+        <h2>Our Services</h2>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">⌘</span>
+
+            <h3>Web Design</h3>
+
+            <p>
+              Clean, modern designs that work across devices.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">⚙</span>
+
+            <h3>Development</h3>
+
+            <p>
+              Fast and responsive websites for your business.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">↗</span>
+
+            <h3>Digital Growth</h3>
+
+            <p>
+              Practical digital solutions for growing brands.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section container" id="about">
+
+      <p class="tagline">ABOUT US</p>
+
+      <h2>Technology made simple.</h2>
+
+      <p>
+        We believe great digital experiences should be
+        accessible, useful, and easy to use.
+      </p>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+
+        <p class="tagline">GET IN TOUCH</p>
+
+        <h2>Let's talk about your idea.</h2>
+
+        <form id="contactForm">
+
+          <label for="name">Your name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter your name"
+            autocomplete="name"
+            required
+          >
+
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          >
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us about your idea"
+            rows="4"
+            required
+          ></textarea>
+
+          <button class="btn" type="submit">
+            Send Message
+          </button>
+
+          <p
+            id="formMessage"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        &copy; <span id="year"></span> Nova. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
